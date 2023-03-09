@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jkrei0</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/styles/base.css">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="icon" href="/assets/icon.svg">
+    </head>
+
+    <body @vue:mounted="mounted()" v-scope>
+        <div class="navigation">
+            <span class="name" role="link" @click="switchPage(1)" tabindex="0" title="Website Home">Jesse Kreider</span>
+            
+            <div class="buttons" :inert="isCurrentPage(pages.home)">
+                <button @click="switchPage(1)" role="link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16" role="presentation">
+                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                    </svg>
+                    Home
+                </button>
+                <button @click="switchPage(2)" role="link">
+                    About
+                </button>
+                <button @click="switchPage(3)" role="link">
+                    Portfolio
+                </button>
+                <button @click="switchPage(4)" role="link">
+                    Contact
+                </button>
+                <span class="selection"></span>
+            </div>
+
+            <span class="clipped"></span>
+        </div>
+
+        <div class="overlay"></div>
+
+        <div class="main">
+            <div class="page" v-bind="pageAttrs(pages.home)">
+                <div class="intro">
+                    <span class="subtitle large bold">Hi! I'm</span>
+                    <h1 class="title">Jesse Kreider,</h1>
+                    <span class="subtitle">A student & developer.</span>
+                </div>
+                <div class="menu">
+                    <button @click="switchPage(pages.about)" role="link">About Me</button>
+                    <button @click="switchPage(pages.portfolio)" role="link">Portfolio</button>
+                    <button @click="links.github()" role="link">Github</button>
+                    <button @click="switchPage(pages.contact)" role="link">Contact <span class="me-spacer">Me</span></button>
+                </div>
+            </div>
+
+            <div class="page first-load" v-bind="pageAttrs(pages.about)">
+                <div class="intro">
+                    <h1 class="title">About Me</h1>
+                    <span class="subtitle large">Hello!</span>
+                    <p class="text">
+                        I'm Jesse, a student, tinkerer, and programmer.<br>
+                        I mainly work on web development, including with Vue.js, SASS, and Node.js.
+                        In addition to web development, I've worked with C++, Python, and Godot.<br>
+                        Aside from programming, I enjoy tinkering, doodling, reading, and games.
+                    </p>
+                </div>
+                <div class="menu mobile-row">
+                    <button role="link" @click="links.github()" title="Github
+(opens in new tab)" aria-label="Link to my github page">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16" aria-label="Github icon">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                    </button>
+                    <button role="link" @click="switchPage(pages.portfolio)" title="Portfolio" aria-label="Link to my porfolio">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16" aria-label="Briefcase icon">
+                            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
+                            <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="page first-load" v-bind="pageAttrs(pages.portfolio)">
+                <div class="intro">
+                    <h1 class="title">My Portfolio</h1>
+                    <span class="subtitle">This is a collection of projects I've created during my programming journey.</span>
+                    <h2 class="large subtitle">Web Development</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <h3>
+                                WeatherFor.Me
+                                <a class="link-to website" target="_blank" href="https://weatherfor.me/">View project</a>
+                            </h3>
+                            <details class="text">
+                                <summary>A simple weather app for anywhere in the US</summary>
+                                that takes data from the National Weather Service and presents it as
+                                nice graphs, created with Node.js and Chart.js. View it at <a href="https://weatherfor.me" target="_blank">weatherfor.me</a>.
+                            </details>
+                            <img src="/assets/weather3.png" loading="lazy" alt="Solvespace toolbar icons">
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Pyroide
+                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/pyroide">See on Github</a>
+                            </h3>
+                            <details class="text">
+                                <summary>Pyroide is a web-based code editor</summary>
+                                built upon the Ace code editor. It offers workspaces in which many people can collaborate on code at once.
+                                I also built a desktop version which offered more functionality.
+                                I am no longer developing pyroide and have no plans to release the desktop version.
+                            </details>
+                            <img src="/assets/pyroide.png" loading="lazy" alt="A screenshot of the pyroide code editor">
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Beacon
+                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/beacon">See on Github</a>
+                            </h3>
+                            <details class="text">
+                                <summary>Beacon was a fork of the Caret code editor</summary>
+                                for Chrome. It incorporated the
+                                <a target="_blank" href="https://github.com/beagleterm/beagle-term">Beagle Term</a>
+                                serial terminal emulator to allow easy programming of Arduinos, NeoTrellises, and
+                                other devices from Chrome/ChromeOS.
+                            </details>
+                            <img src="/assets/arduino.png" loading="lazy" alt="A screenshot of code in the Beacon editor">
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Onu!
+                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/onu-online">See on Github</a>
+                            </h3>
+                            <details class="text">
+                                <summary>An Uno clone built to learn Vue.js</summary>
+                                The backend is built with node.js and socket.io
+                                (mostly because that was the easy way - this project was about Vue, not backends)
+                            </details>
+                            <img src="/assets/onucode.png" loading="lazy" alt="A screenshot of Onu!'s source code">
+                        </div>
+                    </div>
+                    <h2 class="large subtitle">Miscellaneous Projects</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <h3>
+                                Solvespace
+                                <a class="link-to website" target="_blank" href="https://solvespace.com/index.pl">See website</a>
+                            </h3>
+                            <details class="text">
+                                <summary>I helped design new icons for solvespace</summary>
+                                (a 3d CAD modeler). I designed improved icons for the toolbar
+                                and property broswer, which were integrated in release 3.0.
+                            </details>
+                            <div class="imgrow">
+                                <img src="/assets/slvs3.png" loading="lazy" alt="Solvespace toolbar icons">
+                                <img src="/assets/slvs2.png" loading="lazy" alt="Solvespace toolbar icons">
+                                <img src="/assets/slvs1.png" loading="lazy" alt="Solvespace toolbar icons">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Graphing Calculator
+                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/graphing-calculator">View</a>
+                            </h3>
+                            <details class="text">
+                                <summary>A graphing calculator created using c++</summary>
+                                that runs in the terminal. It includes a basic lexer and solver, support for many common functions
+                                (eg sine and cosine), and can graph any implicit equation.
+                            </details>
+                            <img src="/assets/graphing.png" loading="lazy" alt="A screenshot of the graphing calculator">
+                        </div>
+                        <div class="card">
+                            <h3>
+                                Window saver
+                                <a class="link-to download" target="_blank" href="https://www.mediafire.com/file/kvf62iqopoa72kp/windowsave.py/file">Download</a>
+                            </h3>
+                            <details class="text">
+                                <summary>A python script to save your window arrangements.</summary>
+                                The script uses <code>pywin32</code> to save & restore the positions of
+                                your windows. Useful for quickly swapping workflows,
+                                or when frequently disconnecting/reconnecting an external monitor.
+                            </details>
+                            <img src="/assets/winsave2.png" loading="lazy" alt="A screenshot of the window saver application">
+                        </div>
+                    </div>
+                    <div class="menu mobile-row bottom">
+                        <button @click="switchPage(pages.contact)" role="link">Contact Me</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page first-load" v-bind="pageAttrs(pages.contact)">
+                <div class="intro">
+                    <h1 class="title">Contact Me</h1>
+                    <span class="subtitle">
+                        Email me at
+                        <a href="mailto:jkrei021@gmail.com"><span class="code">jkrei021@gmail.com</span></a>
+                    </span>
+                </div>
+
+                <div class="menu">
+                    <button @click="links.github()" role="link">Github</button>
+                    <button @click="switchPage(pages.portfolio)" role="link">Portfolio</button>
+                </div>
+                <!-- <form class="menu" action="/fs">
+                    <span class="inputgroup">
+                        <label for="contact-input-name">Name</label>
+                        <input type="text" name="name" id="contact-input-name" placeholder="john doe" required>
+                    </span>
+                    <span class="inputgroup">
+                        <label for="contact-email-input">Your Email</label>
+                        <input type="email" name="email" id="contact-email-input" placeholder="name@mail.com" required>
+                    </span>
+                    <span class="inputgroup">
+                        <label for="contact-message-input">Message</label>
+                        <textarea name="message" id="contact-message-input" placeholder="write a message..." required></textarea>
+                    </span>
+                    <button @click="switchPage(pages.contact)" role="link">Send</button>
+                </form> -->
+            </div>
+        </div>
+        
+        <button class="back-button" role="link" @click="switchPage(1)" v-if="currentPage !== pages.home">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+            </svg> -->
+            &lt;- Home
+        </button>
+
+        <div class="footer" :aria-hidden="currentPage === pages.home ? null : true">
+            <span>Copyright © 2023 Jesse Kreider</span>
+        </div>
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.inert"></script>
+        <script type="module" src="/scripts/main.js"></script>
+    </body>
+</html>

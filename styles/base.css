@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --background: #3d405b;
+    --background-dark: #222;
+    --text: #f4f1de;
+    --highlight: #e07a5f;
+    --secondary: #81b29a;
+    --font-second: Poppins, Arial, sans-serif;
+    --font-body: Lato, Times, serif;
+    --font-body-sans: Lato, Arial, sans-serif;
+    --font-mono: 'Space Mono', Consolas, monospace;
+    --shadow: #111;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::selection {
+    background: var(--secondary);
+    color: var(--background-dark)
+}
+
+html { height: 100%; }
+
+body {
+    position: relative;
+    background: var(--background-dark);
+    color: var(--text);
+    font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    color: var(--text);
+    font-family: var(--font-body-sans);
+}
+button {
+    color: var(--text);
+}
+code, .code {
+    font-family: var(--font-mono);
+    font-size: inherit;
+    padding-inline: 5px;
+}
+code {
+    background: var(--background);
+    color: var(--text);
+}
+a {
+    color: var(--secondary);
+}
+p, ul, ol, li, details, summary {
+    color: var(--text);
+    font-family: var(--font-body);
+}

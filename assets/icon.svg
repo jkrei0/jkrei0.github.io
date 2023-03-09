@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 26.458333 26.458333"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="4.7572176"
+     inkscape:cx="25.119725"
+     inkscape:cy="42.251588"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true">
+    <sodipodi:guide
+       position="7.6262343,10.73501"
+       orientation="1,0"
+       id="guide8481"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="9.8051524,10.73501"
+       orientation="1,0"
+       id="guide9219"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="18.832099,22.044631"
+       orientation="1,0"
+       id="guide9297"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="9.8051524,22.044579"
+       orientation="0,-1"
+       id="guide9369"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="7.6262343,12.913857"
+       orientation="0,1"
+       id="guide9371"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="12.458263,11.82443"
+       orientation="0,1"
+       id="guide10487"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="5.4484999,14.002164"
+       orientation="0,-1"
+       id="guide13393"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="3.7819726,14.002164"
+       orientation="1,0"
+       id="guide14203"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#81b29a;fill-opacity:1;stroke:#bfbfbf;stroke-width:0.0661458;stroke-linecap:round;paint-order:stroke fill markers"
+       id="rect808"
+       width="26.458332"
+       height="26.458332"
+       x="0"
+       y="0"
+       ry="5" />
+    <g
+       aria-label="J"
+       id="text1644"
+       style="font-weight:bold;font-size:25.9395px;line-height:1.25;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';fill:#22222e;stroke-width:0.264582"
+       transform="translate(-0.11123448)">
+      <path
+         d="m 18.832099,17.124056 c 0,1.884937 -0.466911,3.328903 -1.400733,4.331897 -0.916529,0.985701 -2.265383,1.478551 -4.046562,1.478551 -1.781179,0 -3.190559,-0.49285 -4.228139,-1.478551 -1.0202871,-1.002994 -1.5304306,-2.44696 -1.5304306,-4.331897 v -1.400733 h 2.1789181 v 1.400733 c 0,1.141338 0.2939805,2.057867 0.8819425,2.749587 0.587963,0.69172 1.487199,1.03758 2.697709,1.03758 1.21051,0 2.057867,-0.34586 2.542071,-1.03758 0.484204,-0.69172 0.726306,-1.608249 0.726306,-2.749587 V 6.4369839 l -6.8480285,5.2e-5 V 4.4137542 l 9.0269465,-5.2e-5 v 2.0232817 z"
+         style="font-weight:normal;-inkscape-font-specification:'Space Mono'"
+         id="path8429"
+         sodipodi:nodetypes="scscsccssssscccccs" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:25.9395px;line-height:1.25;font-family:'Space Mono';-inkscape-font-specification:'Space Mono Bold';fill:#22222e;fill-opacity:1;stroke-width:0.264582"
+       x="-21.503866"
+       y="22.912958"
+       id="text8427"><tspan
+         sodipodi:role="line"
+         id="tspan8425"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Space Mono';-inkscape-font-specification:'Space Mono';fill:#22222e;fill-opacity:1;stroke-width:0.264582"
+         x="-21.503866"
+         y="22.912958">J</tspan></text>
+  </g>
+</svg>
