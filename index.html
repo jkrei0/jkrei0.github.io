@@ -82,54 +82,77 @@
             <div class="page first-load" v-bind="pageAttrs(pages.portfolio)">
                 <div class="intro">
                     <h1 class="title">My Portfolio</h1>
-                    <span class="subtitle">This is a collection of projects I've created during my programming journey.</span>
-                    <h2 class="large subtitle">Web Development</h2>
+                    <span class="subtitle spaced">A collection of projects I've created during my programming journey.</span>
                     <div class="cards">
-                        <div class="card">
+                        <div class="card"> <!-- WeatherFor.me -->
                             <h3>
                                 WeatherFor.Me
                                 <a class="link-to website" target="_blank" href="https://weatherfor.me/">View project</a>
                             </h3>
                             <details class="text">
-                                <summary>A simple weather app for anywhere in the US</summary>
+                                <summary>A weather app for anywhere in the US</summary>
                                 that takes data from the National Weather Service and presents it as
                                 nice graphs, created with Node.js and Chart.js. View it at <a href="https://weatherfor.me" target="_blank">weatherfor.me</a>.
                             </details>
-                            <img src="/assets/weather3.png" loading="lazy" alt="Screenshot of Weather Graphs">
+                            <img src="/assets/radar.png" loading="lazy" alt="Screenshot of the weatherfor.me weather radar">
                         </div>
-                        <div class="card">
+                        <div class="card"> <!-- Graphing Calculator -->
+                            <h3>
+                                Graphing Calculator
+                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/graphing-calculator">View</a>
+                            </h3>
+                            <details class="text">
+                                <summary>A graphing calculator created using c++</summary>
+                                that runs in the terminal. It includes a basic lexer and solver, support for many common functions
+                                (eg sine and cosine), and can graph any implicit equation.
+                            </details>
+                            <img src="/assets/graphing_new.png" loading="lazy" alt="A screenshot of the graphing calculator">
+                        </div>
+                        <div class="card"> <!-- SimpleFile -->
                             <h3>
                                 SimpleFile
                                 <a class="link-to github" target="_blank" href="https://github.com/jkrei0/simplefile">See on Github</a>
                             </h3>
                             <details class="text">
-                                <summary>A simple web-based file server made with Node.js</summary>,
-                                useful for transferring / exploring files over WiFi. Designed to be minimalist and easy to set up
+                                <summary>A minimalist web-based file server</summary>
+                                made with Node.js, useful for transferring / exploring files over WiFi. Designed to be minimalist and easy to set up
                                 in order to make simple transfers easy. I originally created it to easily tranfer app icons I designed
                                 for my phone, and refined it over time.
                             </details>
                             <img src="/assets/simplefile.png" loading="lazy" alt="Screenshot of SimpleFile interface">
                         </div>
-                        <div class="card">
+                        <div class="card"> <!-- Solvespace -->
+                            <h3>
+                                Solvespace
+                                <a class="link-to website" target="_blank" href="https://solvespace.com/index.pl">See website</a>
+                            </h3>
+                            <details class="text">
+                                <summary>I helped design new icons for solvespace</summary>
+                                (a 3d CAD modeler). I redesigned nearly all of the icons in the
+                                program, and they were shipped with it in release 3.0.
+                            </details>
+                            <img src="/assets/solvespace.png" loading="lazy" alt="Screenshot of Solvespace with new icons">
+                        </div>
+                        <div class="card"> <!-- Pyroide -->
                             <h3>
                                 Pyroide
                                 <a class="link-to github" target="_blank" href="https://github.com/jkrei0/pyroide">See on Github</a>
                             </h3>
                             <details class="text">
-                                <summary>Pyroide is a web-based code editor</summary>
+                                <summary>A web-based code editor</summary>
                                 built upon the Ace code editor. It offers workspaces in which many people can collaborate on code at once.
                                 I also built a desktop version which offered more functionality.
                                 I am no longer developing pyroide and have no plans to release the desktop version.
                             </details>
                             <img src="/assets/pyroide.png" loading="lazy" alt="A screenshot of the pyroide code editor">
                         </div>
-                        <div class="card">
+                        <div class="card"> <!-- Beacon -->
                             <h3>
                                 Beacon
                                 <a class="link-to github" target="_blank" href="https://github.com/jkrei0/beacon">See on Github</a>
                             </h3>
                             <details class="text">
-                                <summary>Beacon was a fork of the Caret code editor</summary>
+                                <summary>(Was) a fork of the Caret editor</summary>
                                 for Chrome. It incorporated the
                                 <a target="_blank" href="https://github.com/beagleterm/beagle-term">Beagle Term</a>
                                 serial terminal emulator to allow easy programming of Arduinos, NeoTrellises, and
@@ -137,7 +160,7 @@
                             </details>
                             <img src="/assets/arduino.png" loading="lazy" alt="A screenshot of code in the Beacon editor">
                         </div>
-                        <div class="card">
+                        <div class="card"> <!-- Onu! -->
                             <h3>
                                 Onu!
                                 <a class="link-to github" target="_blank" href="https://github.com/jkrei0/onu-online">See on Github</a>
@@ -149,38 +172,7 @@
                             </details>
                             <img src="/assets/onucode.png" loading="lazy" alt="A screenshot of Onu!'s source code">
                         </div>
-                    </div>
-                    <h2 class="large subtitle">Miscellaneous Projects</h2>
-                    <div class="cards">
-                        <div class="card">
-                            <h3>
-                                Solvespace
-                                <a class="link-to website" target="_blank" href="https://solvespace.com/index.pl">See website</a>
-                            </h3>
-                            <details class="text">
-                                <summary>I helped design new icons for solvespace</summary>
-                                (a 3d CAD modeler). I designed improved icons for the toolbar
-                                and property broswer, which were integrated in release 3.0.
-                            </details>
-                            <div class="imgrow">
-                                <img src="/assets/slvs3.png" loading="lazy" alt="Solvespace toolbar icons (3)">
-                                <img src="/assets/slvs2.png" loading="lazy" alt="Solvespace toolbar icons (2)">
-                                <img src="/assets/slvs1.png" loading="lazy" alt="Solvespace toolbar icons (1)">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <h3>
-                                Graphing Calculator
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/graphing-calculator">View</a>
-                            </h3>
-                            <details class="text">
-                                <summary>A graphing calculator created using c++</summary>
-                                that runs in the terminal. It includes a basic lexer and solver, support for many common functions
-                                (eg sine and cosine), and can graph any implicit equation.
-                            </details>
-                            <img src="/assets/graphing.png" loading="lazy" alt="A screenshot of the graphing calculator">
-                        </div>
-                        <div class="card">
+                        <div class="card"> <!-- WindowSave -->
                             <h3>
                                 Window saver
                                 <a class="link-to download" target="_blank" href="https://www.mediafire.com/file/kvf62iqopoa72kp/windowsave.py/file">Download</a>

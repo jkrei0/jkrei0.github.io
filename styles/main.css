@@ -198,6 +198,9 @@ h1.title {
     outline: 6px solid var(--background-dark-translucent);
     max-width: 350px;
 }
+.subtitle.spaced {
+    margin-bottom: 40px;
+}
 .subtitle.bold {
     font-weight: bold;
 }
@@ -338,7 +341,7 @@ form.menu button {
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0;
-    gap: 90px 60px;
+    gap: 110px 60px;
     max-width: 100%;
     margin-bottom: 10px;
 }
@@ -364,15 +367,14 @@ form.menu button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: var(--secondary);
+    color: #8ee1b8;
 }
 .card img {
     object-fit: scale-down;
     flex-grow: 0;
     width: 100%;
     max-height: 225px;
-    -border: 5px solid var(--background);
-    background-color: var(--shadow);
+    object-fit: cover;
     transition: 0.2s;
 }
 .card img:not(:first-of-type) {
@@ -394,7 +396,6 @@ form.menu button {
 .card details:not([open]) > summary {
     cursor: pointer;
     display: inline-block;
-    min-height: 56px;
 }
 .card details:not([open]) > summary:hover {
     text-decoration: underline;
