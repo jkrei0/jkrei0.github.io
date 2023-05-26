@@ -3,6 +3,7 @@
 :root {
     --background: #3d405b;
     --background-dark: #222;
+    --background-dark-translucent: #222d;
     --text: #f4f1de;
     --highlight: #e07a5f;
     --secondary: #81b29a;

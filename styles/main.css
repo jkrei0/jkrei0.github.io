@@ -21,7 +21,11 @@
     mask-size: 100% 100%;
     position: absolute;
     width: 100%;
-    height: 30%;
+    /* 29 because 30% causes a line on chromium browsers
+      (... because why wouldn't it?)
+      29% still does if you zoom in, but mostly fixes it
+    */
+    height: 29%;
     bottom: 0;
 }
 .navigation .buttons {
@@ -190,7 +194,8 @@ h1.title {
     font-family: var(--font-second);
     color: var(--highlight);
     font-size: 1.1em;
-    background: var(--background-dark);
+    background: var(--background-dark-translucent);
+    outline: 6px solid var(--background-dark-translucent);
     max-width: 350px;
 }
 .subtitle.bold {
@@ -333,7 +338,7 @@ form.menu button {
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0;
-    gap: 60px;
+    gap: 90px 60px;
     max-width: 100%;
     margin-bottom: 10px;
 }
@@ -343,7 +348,11 @@ form.menu button {
     flex-direction: column;
     justify-content: flex-start;
 
-    background: var(--background-dark);
+    background: var(--background-dark-translucent);
+    outline: 6px solid var(--background-dark-translucent);
+    
+    /* Make the outline rounded without actually making a visible border radius */
+    border-radius: 0.01px;
 
     transition: border 0.2s;
     width: min(350px, 100%); /* only applies when width < 900px */
@@ -379,9 +388,6 @@ form.menu button {
     align-items: center;
 }
 
-.card details {
-    background: var(--background-dark);
-}
 .card details > summary {
     display: inline;
 }
