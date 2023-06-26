@@ -36,6 +36,15 @@ createApp({
             'data-pagename': this.pageName(page)
         }
     },
+    showMoreProjects() {
+        document.querySelectorAll('.more-projects').forEach(el => {
+            el.removeAttribute('style');
+        });
+        document.querySelector('.main').scrollBy({
+            top: window.innerHeight,
+            behavior: 'smooth'
+        });
+    },
     mounted(nth) {
         window.location.href.replace(/#(\w+)$/, (_m, page) => {
             this.currentPage = this.pages[page] ?? 1;

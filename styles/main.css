@@ -201,6 +201,9 @@ h1.title {
 .subtitle.spaced {
     margin-bottom: 40px;
 }
+.subtitle.spaced-top {
+    margin-top: 40px;
+}
 .subtitle.bold {
     font-weight: bold;
 }
@@ -215,6 +218,9 @@ h2.subtitle, h2.subtitle.large {
     position: relative;
     margin-block: 25px;
     font-size: 23px;
+}
+h2.subtitle.spaced-top {
+    margin-top: 50px;
 }
 
 h1.title::selection,
@@ -363,9 +369,12 @@ form.menu button {
 .card h3 {
     font-size: 24px;
     margin-block: 0;
+    margin-bottom: 10px;
+    gap: 5px;
     transition: background 0.2s, color 0.2s;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     color: #8ee1b8;
 }
@@ -410,8 +419,8 @@ form.menu button {
     font-weight: bold;
     font-size: 24px;
 }
-.card details > summary::marker,
-.card details > summary::-webkit-details-marker {
+details > summary::marker,
+details > summary::-webkit-details-marker {
     display: none;
     content: '';
 }
@@ -422,9 +431,11 @@ form.menu button {
     padding-top: 2px;
     padding-right: 35px;
     opacity: 0.7;
-    transition: opacity 0.2s;
+    transition: opacity 0.1s;
     font-size: 1.075rem;
-    text-decoration: none;
+    text-align: right;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 @keyframes tooltip-appear {
     0% {
@@ -557,6 +568,12 @@ form.menu button {
         align-items: flex-end;
         margin-left: 35px;
         min-width: 120px;
+    }
+    .menu.left {
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 0;
+        margin-right: 35px;
     }
     .menu button:hover,
     .menu button:focus {

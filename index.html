@@ -82,12 +82,12 @@
             <div class="page first-load" v-bind="pageAttrs(pages.portfolio)">
                 <div class="intro">
                     <h1 class="title">My Portfolio</h1>
-                    <span class="subtitle spaced">A collection of projects I've created during my programming journey.</span>
+                    <h2 class="subtitle large">I'm most proud of ...</h2>
                     <div class="cards">
                         <div class="card"> <!-- WeatherFor.me -->
                             <h3>
                                 WeatherFor.Me
-                                <a class="link-to website" target="_blank" href="https://weatherfor.me/">View project</a>
+                                <a class="link-to website" target="_blank" href="https://weatherfor.me/">Live Website</a>
                             </h3>
                             <details class="text">
                                 <summary>A weather app for anywhere in the US</summary>
@@ -99,7 +99,7 @@
                         <div class="card"> <!-- Graphing Calculator -->
                             <h3>
                                 Graphing Calculator
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/graphing-calculator">View</a>
+                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/graphing-calculator">Source</a>
                             </h3>
                             <details class="text">
                                 <summary>A graphing calculator created using c++</summary>
@@ -111,7 +111,7 @@
                         <div class="card"> <!-- SimpleFile -->
                             <h3>
                                 SimpleFile
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/simplefile">See on Github</a>
+                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/simplefile">Source Code</a>
                             </h3>
                             <details class="text">
                                 <summary>A minimalist web-based file server</summary>
@@ -124,7 +124,7 @@
                         <div class="card"> <!-- Solvespace -->
                             <h3>
                                 Solvespace
-                                <a class="link-to website" target="_blank" href="https://solvespace.com/index.pl">See website</a>
+                                <a class="link-to website" target="_blank" href="https://solvespace.com/index.pl">Website</a>
                             </h3>
                             <details class="text">
                                 <summary>I helped design new icons for solvespace</summary>
@@ -133,10 +133,19 @@
                             </details>
                             <img src="/assets/solvespace.png" loading="lazy" alt="Screenshot of Solvespace with new icons">
                         </div>
+                    </div>
+                    
+                    <div class="menu bottom left">
+                        <button @click="showMoreProjects()">More Projects</button>
+                    </div>
+
+                    <h2 class="subtitle large spaced-top more-projects" style="display: none">I've also worked on ...</h2>
+                
+                    <div class="cards more-projects" style="display: none">
                         <div class="card"> <!-- Pyroide -->
                             <h3>
                                 Pyroide
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/pyroide">See on Github</a>
+                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/pyroide">Source Code</a>
                             </h3>
                             <details class="text">
                                 <summary>A web-based code editor</summary>
@@ -149,7 +158,7 @@
                         <div class="card"> <!-- Beacon -->
                             <h3>
                                 Beacon
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/beacon">See on Github</a>
+                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/beacon">Source Code</a>
                             </h3>
                             <details class="text">
                                 <summary>(Was) a fork of the Caret editor</summary>
@@ -163,7 +172,7 @@
                         <div class="card"> <!-- Onu! -->
                             <h3>
                                 Onu!
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/onu-online">See on Github</a>
+                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/onu-online">Source Code</a>
                             </h3>
                             <details class="text">
                                 <summary>An Uno clone built to learn Vue.js</summary>
@@ -175,7 +184,7 @@
                         <div class="card"> <!-- WindowSave -->
                             <h3>
                                 Window saver
-                                <a class="link-to download" target="_blank" href="https://www.mediafire.com/file/kvf62iqopoa72kp/windowsave.py/file">Download</a>
+                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/pywinsave">Source Code</a>
                             </h3>
                             <details class="text">
                                 <summary>A python script to save your window arrangements.</summary>
@@ -185,9 +194,6 @@
                             </details>
                             <img src="/assets/winsave2.png" loading="lazy" alt="A screenshot of the window saver application">
                         </div>
-                    </div>
-                    <div class="menu mobile-row bottom">
-                        <button @click="switchPage(pages.contact)" role="link">Contact Me</button>
                     </div>
                 </div>
             </div>
