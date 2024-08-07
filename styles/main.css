@@ -378,6 +378,19 @@ form.menu button {
     justify-content: space-between;
     color: #8ee1b8;
 }
+.card h3.starred {
+    margin-left: 30px;
+}
+.card h3.starred::before {
+    position: absolute;
+    background-image: url('/assets/star.svg');
+    background-size: cover;
+    content: ' ';
+    top: 4px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+}
 .card img {
     object-fit: scale-down;
     flex-grow: 0;
