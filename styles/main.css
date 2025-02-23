@@ -427,9 +427,13 @@ form.menu button {
     align-items: center;
 }
 
+.card details {
+    position: relative;
+    padding-bottom: 1.3em;
+}
+
 .card details > summary {
     display: inline-block;
-    position: relative;
     width: 100%;
 }
 .card details:not([open]) > summary {
@@ -442,16 +446,13 @@ form.menu button {
 .card details > summary::after {
     content: 'more';
     position: absolute;
-    right: 0px;
+    left: 0;
     bottom: 0;
     cursor: pointer;
     color: var(--highlight);
     font-weight: light;
     font-size: .8em;
     text-decoration: underline;
-
-    padding-left: 20px;
-    background: linear-gradient(to right, transparent, var(--background-dark) 60%);
 }
 .card details[open] > summary::after {
     content: 'less';
@@ -579,6 +580,18 @@ details > summary::-webkit-details-marker {
     .cards {
         flex-direction: row;
         flex-wrap: wrap;
+    }
+    .card details {
+        padding-bottom: 0;
+    }
+    .card details > summary::after {
+        right: 0;
+        top: 0;
+        left: unset;
+        bottom: unset;
+
+        padding-left: 20px;
+        background: linear-gradient(to right, transparent, var(--background-dark) 60%);
     }
     .overlay {
         display: block;
