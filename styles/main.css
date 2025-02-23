@@ -178,6 +178,7 @@
 .home-container {
     display: flex;
     flex-direction: column;
+    max-width: 90vw;
 }
 
 .intro {
@@ -238,6 +239,7 @@ h1.title::selection,
     margin-bottom: 10px;
     font-size: 18px;
     line-height: 150%;
+    max-width: 350px;
 }
 
 .menu {
@@ -360,7 +362,8 @@ form.menu button {
     box-sizing: border-box;
     padding: 0;
     gap: 110px 60px;
-    width: 100%;
+    max-width: 100%;
+    min-width: min(350px, 90vw);
     margin-bottom: 15vh;
 }
 .card {
@@ -446,6 +449,9 @@ form.menu button {
     font-weight: light;
     font-size: .8em;
     text-decoration: underline;
+
+    padding-left: 20px;
+    background: linear-gradient(to right, transparent, var(--background-dark) 60%);
 }
 .card details[open] > summary::after {
     content: 'less';
@@ -533,7 +539,7 @@ details > summary::-webkit-details-marker {
         margin-top: 0;
     }
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 600px) {
     h1.title {
         padding-right: 3em;
     }
