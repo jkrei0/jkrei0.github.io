@@ -11,13 +11,13 @@
 
     <body @vue:mounted="mounted()" v-scope>
         <div class="navigation">
-            <span class="name" role="link" @click="switchPage(1)" tabindex="0" title="Website Home">Jesse Kreider</span>
+            <span class="name" role="link" @click="switchPage(1)" tabindex="0" title="Website Home">Jessica Kreider</span>
             
             <div class="buttons" :inert="isCurrentPage(pages.home)">
                 <button @click="switchPage(1)" role="link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16" role="presentation">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16" role="presentation">
                         <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
-                    </svg>
+                    </svg> -->
                     Home
                 </button>
                 <button @click="switchPage(2)" role="link">
@@ -39,16 +39,20 @@
 
         <div class="main">
             <div class="page" v-bind="pageAttrs(pages.home)">
-                <div class="intro">
-                    <span class="subtitle large bold">Hi! I'm</span>
-                    <h1 class="title">Jess Kreider</h1>
-                    <span class="subtitle">A student & developer.</span>
-                </div>
-                <div class="menu">
-                    <button @click="switchPage(pages.about)" role="link">About Me</button>
-                    <button @click="switchPage(pages.portfolio)" role="link">Portfolio</button>
-                    <button @click="links.github()" role="link">Github</button>
-                    <button @click="switchPage(pages.contact)" role="link">Contact <span class="me-spacer">Me</span></button>
+                <div class="home-container">
+                    <div class="intro">
+                        <span class="subtitle large bold">Hi! I'm</span>
+                        <h1 class="title">Jessica<br>Kreider</h1>
+                        <span class="subtitle">
+                            I'm a student who enjoys art, design, and poking at computers<br>
+                        </span>
+                    </div>
+                    <div class="menu">
+                        <button @click="switchPage(pages.about)" role="link">About Me</button>
+                        <button @click="switchPage(pages.portfolio)" role="link">Portfolio</button>
+                        <button @click="links.github()" role="link">Github</button>
+                        <button @click="switchPage(pages.contact)" role="link">Contact <span class="me-spacer">Me</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -57,7 +61,7 @@
                     <h1 class="title">About Me</h1>
                     <span class="subtitle large">Hello!</span>
                     <p class="text">
-                        I'm Jesse, a student, tinkerer, and programmer.<br>
+                        I'm Jessica, a student, tinkerer, and programmer.<br>
                         I mainly work on web development, including with Vue.js, SASS, and Node.js.
                         In addition to web development, I've worked with C++, PHP, Python, and Godot.
                         Aside from programming, I enjoy tinkering, doodling, reading, and games.
@@ -84,115 +88,55 @@
                     <h1 class="title">My Portfolio</h1>
                     <h2 class="subtitle large">I'm most proud of ...</h2>
                     <div class="cards">
-                        <div class="card"> <!-- WeatherFor.me -->
-                            <h3 class="starred">
-                                WeatherFor.Me
-                                <a class="link-to website" target="_blank" href="https://weatherfor.me/">Live Website</a>
-                            </h3>
-                            <details class="text">
-                                <summary>A weather app for anywhere in the US</summary>
-                                that takes data from the National Weather Service and presents it as
-                                nice graphs, created with Node.js and Chart.js. View it at <a href="https://weatherfor.me" target="_blank">weatherfor.me</a>.
-                            </details>
-                            <img src="/assets/radar.png" loading="lazy" alt="Screenshot of the weatherfor.me weather radar">
-                        </div>
                         <div class="card"> <!-- Gameify -->
-                            <h3 class="starred">
+                            <h3>
                                 Gameify
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/gameify">Source Code</a>
+                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/gameify">Source</a>
                             </h3>
                             <details class="text">
                                 <summary>An object-oriented 2d game engine</summary>
-                                developed from scratch in vanilla javascript. Gameify runs (and exports games) <a href="https://gameify.vercel.app">in the browser</a>,
+                                developed from scratch in vanilla javascript. Gameify runs <a href="https://gameify.vercel.app">in the browser</a>,
                                 offering a simple and accesible way to make 2d games.
                             </details>
                             <img src="/assets/gameify.png" loading="lazy" alt="Screenshot of SimpleFile interface">
                         </div>
-                        <div class="card"> <!-- Solvespace -->
+                        <div class="card"> <!-- WeatherFor.me -->
                             <h3>
-                                Solvespace
-                                <a class="link-to website" target="_blank" href="https://solvespace.com/index.pl">Website</a>
+                                WeatherForMe
+                                <a class="link-to website" target="_blank" href="https://jkrei0.alwaysdata.net/weather/">Visit</a>
                             </h3>
                             <details class="text">
-                                <summary>I helped design new icons for solvespace</summary>
-                                (a 3d CAD modeler). I redesigned nearly all of the icons in the
-                                program, and they were shipped with it in release 3.0.
+                                <summary>A weather app for anywhere in the U.S.</summary>
+                                WeatherForMe uses data from the National Weather Service and presents it as
+                                nice graphs. Created with Node.js and Chart.js.
                             </details>
-                            <img src="/assets/solvespace.png" loading="lazy" alt="Screenshot of Solvespace with new icons">
+                            <img src="/assets/radar.png" loading="lazy" alt="Screenshot of the weatherfor.me weather radar">
                         </div>
-                        <div class="card"> <!-- Graphing Calculator -->
-                            <h3>
-                                Graphing Calculator
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/graphing-calculator">Source</a>
-                            </h3>
-                            <details class="text">
-                                <summary>A graphing calculator created using c++</summary>
-                                that runs in the terminal. It includes a basic lexer and solver, support for many common functions
-                                (eg sine and cosine), and can graph any implicit equation.
-                            </details>
-                            <img src="/assets/graphing_new.png" loading="lazy" alt="A screenshot of the graphing calculator">
-                        </div>
-                    </div>
-                    
-                    <div class="menu bottom left">
-                        <button @click="showMoreProjects()">More Projects</button>
-                    </div>
-
-                    <h2 class="subtitle large spaced-top more-projects" style="display: none">Some smaller projects</h2>
-                
-                    <div class="cards more-projects" style="display: none">
                         <div class="card"> <!-- SimpleFile -->
                             <h3>
                                 SimpleFile
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/simplefile">Source Code</a>
+                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/simplefile">Source</a>
                             </h3>
                             <details class="text">
-                                <summary>A minimalist web-based file server</summary>
-                                made with Node.js, useful for transferring / exploring files over WiFi. Designed to be minimalist and easy to set up
-                                in order to make simple transfers easy. I originally created it to easily tranfer app icons I designed
-                                for my phone, and refined it over time.
+                                <summary>A minimalist web-based file browser</summary>
+                                for easily downloading files over wifi.
+                                It's designed to be quick to set up, to make simple transfers easy.
+                                I originally created it in a pinch because my phone and computer refused to play nice, and have refined it over time.
                             </details>
                             <img src="/assets/simplefile.png" loading="lazy" alt="Screenshot of SimpleFile interface">
                         </div>
-                        <div class="card"> <!-- Pyroide -->
+                        <div class="card"> <!-- Solvespace -->
                             <h3>
-                                Pyroide
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/pyroide">Source Code</a>
+                                Solvespace
+                                <!-- <a class="link-to website" target="_blank" href="https://solvespace.com/index.pl">Website</a> -->
+                                <a class="link-to github" target="_blank" href="https://github.com/solvespace/solvespace">Github</a>
                             </h3>
                             <details class="text">
-                                <summary>A web-based code editor</summary>
-                                built upon the Ace code editor. It offers workspaces in which many people can collaborate on code at once.
-                                I also built a desktop version which offered more functionality.
-                                I am no longer developing pyroide and have no plans to release the desktop version.
+                                <summary>I helped design new icons for Solvespace</summary>
+                                (an open-source 3d CAD program). I recreated nearly all of the icons in the
+                                program, and they were shipped with it in release 3.0.
                             </details>
-                            <img src="/assets/pyroide.png" loading="lazy" alt="A screenshot of the pyroide code editor">
-                        </div>
-                        <div class="card"> <!-- Beacon -->
-                            <h3>
-                                Beacon
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/beacon">Source Code</a>
-                            </h3>
-                            <details class="text">
-                                <summary>(Was) a fork of the Caret editor</summary>
-                                for Chrome. It incorporated the
-                                <a target="_blank" href="https://github.com/beagleterm/beagle-term">Beagle Term</a>
-                                serial terminal emulator to allow easy programming of Arduinos, NeoTrellises, and
-                                other devices from Chrome/ChromeOS.
-                            </details>
-                            <img src="/assets/arduino.png" loading="lazy" alt="A screenshot of code in the Beacon editor">
-                        </div>
-                        <div class="card"> <!-- WindowSave -->
-                            <h3>
-                                Window saver
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/pywinsave">Source Code</a>
-                            </h3>
-                            <details class="text">
-                                <summary>A python script to save your window arrangements.</summary>
-                                The script uses <code>pywin32</code> to save & restore the positions of
-                                your windows. Useful for quickly swapping workflows,
-                                or when frequently disconnecting/reconnecting an external monitor.
-                            </details>
-                            <img src="/assets/winsave2.png" loading="lazy" alt="A screenshot of the window saver application">
+                            <img src="/assets/solvespace.png" loading="lazy" alt="Screenshot of Solvespace with new icons">
                         </div>
                     </div>
                 </div>
@@ -211,33 +155,18 @@
                     <button @click="links.github()" role="link">Github</button>
                     <button @click="switchPage(pages.portfolio)" role="link">Portfolio</button>
                 </div>
-                <!-- <form class="menu" action="/fs">
-                    <span class="inputgroup">
-                        <label for="contact-input-name">Name</label>
-                        <input type="text" name="name" id="contact-input-name" placeholder="john doe" required>
-                    </span>
-                    <span class="inputgroup">
-                        <label for="contact-email-input">Your Email</label>
-                        <input type="email" name="email" id="contact-email-input" placeholder="name@mail.com" required>
-                    </span>
-                    <span class="inputgroup">
-                        <label for="contact-message-input">Message</label>
-                        <textarea name="message" id="contact-message-input" placeholder="write a message..." required></textarea>
-                    </span>
-                    <button @click="switchPage(pages.contact)" role="link">Send</button>
-                </form> -->
             </div>
         </div>
         
         <button class="back-button" role="link" @click="switchPage(1)" v-if="currentPage !== pages.home">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
-            </svg> -->
-            &lt;- Home
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+            </svg>
+            Home
         </button>
 
         <div class="footer" :aria-hidden="currentPage === pages.home ? null : true">
-            <span>Copyright © 2023 Jesse Kreider</span>
+            <span>Copyright © 2023 Jessica Kreider</span>
         </div>
 
         <script src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.inert"></script>

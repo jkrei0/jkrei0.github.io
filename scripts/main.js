@@ -9,6 +9,7 @@ createApp({
         contact: 4
     },
     currentPage: 1,
+    moreProjectsVisible: false,
     pageName(page) {
         if (!page) page = this.currentPage;
         return Object.keys(this.pages).find(key => this.pages[key] === page) ?? 'home';
@@ -37,9 +38,10 @@ createApp({
         }
     },
     showMoreProjects() {
-        document.querySelectorAll('.more-projects').forEach(el => {
+        this.moreProjectsVisible = true;
+        /* document.querySelectorAll('.more-projects').forEach(el => {
             el.removeAttribute('style');
-        });
+        }); */
         document.querySelector('.main').scrollBy({
             top: window.innerHeight,
             behavior: 'smooth'

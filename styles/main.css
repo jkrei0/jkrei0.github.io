@@ -175,6 +175,11 @@
     animation: 0.7s fade-in forwards;
 }
 
+.home-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .intro {
     display: flex;
     flex-direction: column;
@@ -183,7 +188,7 @@
 }
 
 h1.title {
-    font-size: 42px;
+    font-size: 54px;
     margin: 0;
     margin-bottom: 10px;
     padding: 10px 25px;
@@ -246,6 +251,7 @@ h1.title::selection,
 }
 .menu.mobile-row {
     flex-direction: row;
+    justify-content: flex-end;
 }
 .menu.bottom {
     margin-bottom: 75px;
@@ -316,12 +322,18 @@ form.menu button {
     opacity: 0;
 }
 
-:is(.menu button, .back-button) .bi {
+:is(.back-button) .bi {
+    --size: 18px;
+    top: 2px;
+}
+:is(.menu button) .bi {
     --size: 28px;
+    top: 5px;
+}
+:is(.menu button, .back-button) .bi {
     width: var(--size);
     height: var(--size);
     position: relative;
-    top: 5px;
 }
 .menu button:is(:hover, :focus) {
     background: var(--secondary);
@@ -348,8 +360,8 @@ form.menu button {
     box-sizing: border-box;
     padding: 0;
     gap: 110px 60px;
-    max-width: 100%;
-    margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 15vh;
 }
 .card {
     display: flex;
@@ -413,25 +425,32 @@ form.menu button {
 }
 
 .card details > summary {
-    display: inline;
+    display: inline-block;
+    position: relative;
+    width: 100%;
 }
 .card details:not([open]) > summary {
     cursor: pointer;
-    display: inline-block;
 }
 .card details:not([open]) > summary:hover {
     text-decoration: underline;
     text-decoration-color: #fff6;
 }
-.card details:not([open]) > summary::after {
-    content: '...';
-    position: relative;
-    left: 5px;
+.card details > summary::after {
+    content: 'more';
+    position: absolute;
+    right: 0px;
+    bottom: 0;
     cursor: pointer;
     color: var(--highlight);
-    font-weight: bold;
-    font-size: 24px;
+    font-weight: light;
+    font-size: .8em;
+    text-decoration: underline;
 }
+.card details[open] > summary::after {
+    content: 'less';
+}
+
 details > summary::marker,
 details > summary::-webkit-details-marker {
     display: none;
@@ -504,27 +523,25 @@ details > summary::-webkit-details-marker {
 .me-spacer {
     display: none;
 }
-@media only screen and (min-height: 700px) {
+@media only screen and (min-height: 750px) {
     .intro {
         margin-block: 50px;
     }
 }
-@media only screen and (max-width: 400px) and (min-height: 700px) {
+@media only screen and (max-width: 400px) and (min-height: 750px) {
     [data-pagename=home] .intro {
         margin-top: 0;
     }
 }
-@media only screen and (max-width: 400px) {
-    .menu .inputgroup input,
-    .menu .inputgroup textarea {
-        width: 100%;
+@media only screen and (min-width: 500px) {
+    h1.title {
+        padding-right: 3em;
     }
 }
 @media only screen and (min-width: 400px) {
     .menu {
-        flex-direction: row;
         align-self: unset;
-        justify-content: center;
+        align-items: flex-start;
     }
     form.menu {
         flex-direction: column;
@@ -534,7 +551,6 @@ details > summary::-webkit-details-marker {
         display: inline;
     }
 }
-
 @media only screen and (min-width: 900px) {
     .me-spacer {
         display: none;
@@ -574,10 +590,14 @@ details > summary::-webkit-details-marker {
         flex-direction: row;
         justify-content: space-between;
     }
+    .home-container {
+        width: 100%;
+        flex-direction: row;
+    }
     .menu {
         flex-direction: column;
         flex-grow: 1;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: flex-end;
         margin-left: 35px;
         min-width: 120px;
