@@ -175,7 +175,7 @@
     animation: 0.7s fade-in forwards;
 }
 
-.home-container {
+.section-container {
     display: flex;
     flex-direction: column;
     max-width: 90vw;
@@ -186,6 +186,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-grow: 1;
 }
 
 h1.title {
@@ -239,7 +240,7 @@ h1.title::selection,
     margin-bottom: 10px;
     font-size: 18px;
     line-height: 150%;
-    max-width: 350px;
+    max-width: min(450px, 90vw);
 }
 
 .menu {
@@ -609,17 +610,16 @@ details > summary::-webkit-details-marker {
         flex-direction: row;
         justify-content: space-between;
     }
-    .home-container {
+    .section-container {
         width: 100%;
         flex-direction: row;
     }
     .menu {
         flex-direction: column;
-        flex-grow: 1;
         justify-content: center;
         align-items: flex-end;
         margin-left: 35px;
-        min-width: 120px;
+        min-width: 180px;
     }
     .menu.left {
         justify-content: flex-start;
