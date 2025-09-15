@@ -374,7 +374,7 @@ form.menu button {
     justify-content: flex-start;
 
     background: var(--background-dark-translucent);
-    outline: 6px solid var(--background-dark-translucent);
+    outline: 7px solid var(--background-dark-translucent);
     
     /* Make the outline rounded without actually making a visible border radius */
     border-radius: 0.01px;
@@ -392,7 +392,7 @@ form.menu button {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: #8ee1b8;
+    color: var(--highlight-text);
 }
 .card h3.starred {
     margin-left: 30px;
@@ -465,8 +465,9 @@ details > summary::-webkit-details-marker {
     content: '';
 }
 .card .link-to {
+    position: relative;
     background: transparent no-repeat right;
-    color: white;
+    color: white; /* This is set by --link-icon-filter */
     min-height: 25px;
     padding-top: 2px;
     padding-right: 35px;
@@ -488,35 +489,17 @@ details > summary::-webkit-details-marker {
         opacity: 1;
     }
 }
-.card .link-to::-after {
-    content: 'View this project';
-    position: absolute;
-    top: 30px;
-    right: -5px;
-    padding: 5px;
-    width: 100px;
-    box-shadow: 1px 2px 3px 0px var(--background-dark);
-    font-size: 12px;
-    font-family: var(--font-second);
-
-    border: 1px solid var(--background);
-    background: var(--background-dark);
-    color: var(--text);
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0;
-}
-.card .link-to:hover::after {
-    animation: 1s tooltip-appear forwards;
-}
 .card .link-to.github {
     background-image: url('/assets/github-white.svg');
+    filter: var(--link-icon-filter);
 }
 .card .link-to.download {
     background-image: url('/assets/download-white.svg');
+    filter: var(--link-icon-filter);
 }
 .card .link-to.website {
     background-image: url('/assets/link-45-deg-white.svg');
+    filter: var(--link-icon-filter);
     padding-right: 30px;
 }
 .card .link-to:hover {
@@ -601,7 +584,7 @@ details > summary::-webkit-details-marker {
         bottom: 0;
         left: 0;
         right: 0;
-        background-image: url('/assets/background.svg');
+        background-image: var(--page-background-image);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         pointer-events: none;

@@ -3,15 +3,18 @@
 :root {
     --background: #3d405b;
     --background-dark: #222;
-    --background-dark-translucent: #222d;
+    --background-dark-translucent: #222c;
     --text: #f4f1de;
     --highlight: #e07a5f;
     --secondary: #81b29a;
+    --highlight-text: #8ee1b8;
+    --link-icon-filter: invert(10%);
     --font-second: Poppins, Arial, sans-serif;
     --font-body: Lato, Times, serif;
     --font-body-sans: Lato, Arial, sans-serif;
     --font-mono: 'Space Mono', Consolas, monospace;
     --shadow: #111;
+    --page-background-image: url('/assets/background.svg');
 }
 
 * {

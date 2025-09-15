@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --background: #C8BBAD;
+    --background-dark: #D7D0C8;
+    --background-dark-translucent: #D7D0C877;
+    --text: #15171E;
+    --highlight: #AC3931;
+    --secondary: #488286;
+    --highlight-text: #488286;
+    --link-icon-filter: invert(100%);
+    --font-second: Poppins, Arial, sans-serif;
+    --font-body: Lato, Times, serif;
+    --font-body-sans: Lato, Arial, sans-serif;
+    --font-mono: 'Space Mono', Consolas, monospace;
+    --shadow: #BBB;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::selection {
+    background: var(--secondary);
+    color: var(--background-dark)
+}
+
+html { height: 100%; }
+
+body {
+    position: relative;
+    background: var(--background-dark);
+    color: var(--text);
+    font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    color: var(--text);
+    font-family: var(--font-body-sans);
+}
+button {
+    color: var(--text);
+}
+code, .code {
+    font-family: var(--font-mono);
+    font-size: inherit;
+    padding-inline: 5px;
+}
+code {
+    background: var(--background);
+    color: var(--text);
+}
+a {
+    color: var(--secondary);
+}
+p, ul, ol, li, details, summary {
+    color: var(--text);
+    font-family: var(--font-body);
+}

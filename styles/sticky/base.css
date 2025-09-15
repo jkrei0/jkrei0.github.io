@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Fredericka+the+Great&display=swap');
+
+:root {
+    --header-font-family: "Fredericka the Great", serif;
+    --body-font-family: "Baloo 2", sans-serif;
+    --base-font-size: 18px;
+    --text-color: #222;
+    --header-color: #444054;
+    --bg-yellow: #FFD670;
+    --bg-purple: #ff94d4;
+    --bg-orange: #FF9770;
+    --bg-blue: #92D4B3;
+    --bg-green: #C3E8B0;
+    --shadow-color: #444054;
+    --body-background: #FCECC5;
+}
