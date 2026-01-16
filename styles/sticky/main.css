@@ -171,7 +171,9 @@ button {
         flex-direction: row;
         flex-wrap: wrap;
         max-width: min(680px, 80vw);
-        gap: 80px;
+        gap: 60px 80px;
+        padding-bottom: 20px;
+        margin-top: 30px;
 
         .card {
             position: relative;
@@ -249,6 +251,7 @@ button {
                 display: block;
                 margin-left: 20px;
                 margin-top: 5px;
+                margin-bottom: -55px;
                 top: 0;
                 max-width: 130%;
                 max-height: 150px;
@@ -259,24 +262,22 @@ button {
             }
         }
 
-        .card:nth-of-type(1) {
+        .card:nth-of-type(1), .card.n1 {
             --card-tilt: 6deg;
         }
-        .card:nth-of-type(2) {
+        .card:nth-of-type(2), .card.n2 {
             --card-color: var(--bg-green);
             --card-tilt: -4deg;
             margin-left: -30px;
         }
-        .card:nth-of-type(3) {
+        .card:nth-of-type(3), .card.n3 {
             --card-color: var(--bg-blue);
             --card-tilt: 0deg;
-            margin-top: -40px;
             margin-right: -10px;
         }
-        .card:nth-of-type(4) {
+        .card:nth-of-type(4), .card.n4 {
             --card-color: var(--bg-purple);
             --card-tilt: 5deg;
-            margin-top: -60px;
         }
     }
 
@@ -316,11 +317,12 @@ button {
         background-image:
             var(--card-top-gradient),
             linear-gradient(to bottom, var(--card-color) 13%, transparent 13%),
-            repeating-linear-gradient(5deg, transparent 0px, #0002 1px, transparent 2px, transparent 1.6em)
+            repeating-linear-gradient(5deg, transparent 0px, #0002 1px, transparent 2px, transparent 1.56em)
             ;
         height: unset;
+        background-position-y: -3px;
 
-        *:not(h1) {
+        >*:not(h1) {
             position: relative;
             top: 18px;
         }
@@ -328,7 +330,7 @@ button {
         .subtitle {
             position: relative;
             font-weight: 500;
-            top: 0.9em;
+            top: 1.95em;
         }
     }
     .menu {
@@ -342,6 +344,23 @@ button {
         --card-color: var(--bg-purple);
     }
 }
+.page[data-pagename=portfolio] {
+    .subtitle.large {
+        position: relative;
+        font-size: 1.1em;
+        margin-top: 30px;
+        color: var(--header-color);
+        &::after {
+            content: '';
+            position: absolute;
+            width: 30%;
+            height: 0;
+            top: 50%;
+            right: 0px;
+            border-bottom: 1px solid rgb(from var(--header-color) r g b / 50%);
+        }
+    }
+}
 
 @media (width < 850px) {
     .main .cards {
@@ -352,8 +371,10 @@ button {
             margin-right: 0 !important;
             margin-top: 0 !important;
             margin-bottom: 0 !important;
+            height: unset;
             img {
                 max-height: 180px;
+                margin-bottom: -85px;
             }
             &:last-child {
                 margin-bottom: 40px !important;
