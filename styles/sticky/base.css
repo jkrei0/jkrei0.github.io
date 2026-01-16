@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Fredericka+the+Great&display=swap');
+@import url('/fonts/baloo-2/baloo-2.css');
+@import url('/fonts/fredericka-the-great/fredericka-the-great.css');
 
 :root {
     --header-font-family: "Fredericka the Great", serif;
