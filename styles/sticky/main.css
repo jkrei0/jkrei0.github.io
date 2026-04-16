@@ -3,7 +3,12 @@
 * { box-sizing: border-box; }
 
 :root {
-    --card-top-gradient: linear-gradient(to bottom, #0001 13%, transparent 13%);
+    --card-height-calc: min(300px, 80vmin);
+    --card-top-gradient: linear-gradient(
+            to bottom,
+            #0001 calc(var(--card-height-calc) * .13),
+            transparent calc(var(--card-height-calc) * .13)
+        );
 }
 
 body {
@@ -94,9 +99,10 @@ button {
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
+    overflow-y: visible;
 
     padding-block: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
     margin-bottom: 20px;
 
     .page[inert] {
@@ -119,13 +125,13 @@ button {
 
         padding: 40px;
         width: min(300px, 80vmin);
-        height: min(300px, 80vmin);
+        /*height: min(300px, 80vmin);*/
         min-height: min(300px, 80vmin);
 
         --card-color: var(--bg-yellow);
+        --box-shadow: 4px 8px 8px -2px rgb(from var(--shadow-color) r g b / 40%);
         background-color: var(--card-color);
         background-image: var(--card-top-gradient);
-        --box-shadow: 4px 8px 8px -2px rgb(from var(--shadow-color) r g b / 40%);
         box-shadow: var(--box-shadow);
 
         border-radius: 0px;
@@ -239,22 +245,33 @@ button {
                 margin-top: 10px;
 
                 a {
+                    position: relative;
                     font-family: var(--body-font-family);
                     font-weight: normal;
                     color: var(--text-color);
                     font-size: 0.8em;
+                    &.link-to::after {
+                        content: ' ';
+                        position: absolute;
+                        right: -1em;
+                        top: .4em;
+                        width: .7em;
+                        height: .7em;
+                        background-size: 100% 100%;
+                        background-image: url("../../assets/box-arrow-up-right.svg");
+                    }
                 }
             }
             
             & > img {
                 position: relative;
                 display: block;
-                margin-left: 20px;
+                margin-inline: auto;
                 margin-top: 5px;
                 margin-bottom: -55px;
                 top: 0;
-                max-width: 130%;
-                max-height: 150px;
+                max-width: min(130%, 270px);
+                max-height: 255px;
                 border: 6px solid var(--header-color);
                 z-index: 1;
 
@@ -298,7 +315,7 @@ button {
 }
 
 .page[data-pagename=home] {
-    margin-bottom: 10vh;
+    margin-bottom: 1vh;
 
     .menu {
         margin-top: 100px;
@@ -317,10 +334,10 @@ button {
         background-image:
             var(--card-top-gradient),
             linear-gradient(to bottom, var(--card-color) 13%, transparent 13%),
-            repeating-linear-gradient(5deg, transparent 0px, #0002 1px, transparent 2px, transparent 1.56em)
+            repeating-linear-gradient(5deg, transparent 0px, #0002 1px, transparent 2px, transparent 1.6em)
             ;
         height: unset;
-        background-position-y: -3px;
+        background-position-y: -4px;
 
         >*:not(h1) {
             position: relative;
@@ -373,7 +390,8 @@ button {
             margin-bottom: 0 !important;
             height: unset;
             img {
-                max-height: 180px;
+                max-height: 270px;
+                max-width: 255px;
                 margin-bottom: -85px;
             }
             &:last-child {

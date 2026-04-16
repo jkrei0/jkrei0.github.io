@@ -62,9 +62,10 @@
                     <h1 class="title">About Me</h1>
                     <span class="subtitle large">Hello!</span>
                     <p class="text">
-                        I'm Jessica, a student who enjoys design, engineering, and working with computers.
-                        I'm most proficient in web development and C++, but am also familiar with a number of
-                        other languages.
+                        I'm studying Computer Science and Graphic Design.
+                        If you'd like to see some of my work, check out my portfolio and Github.
+                        I'm most proficient programming in web development and C++, but am also
+                        familiar with a number of other languages.
                         In my free time, you'll find me tinkering, doodling, or playing games.
                     </p>
                     </div>
@@ -89,13 +90,30 @@
 
             <div class="page first-load" v-bind="pageAttrs(pages.portfolio)">
                 <div class="intro">
-                    <h1 class="title">My Projects</h1>
-                    <h2 class="subtitle large">I'm most proud of ...</h2>
+                    <h1 class="title">Portfolio</h1>
                     <div class="cards">
-                        <div class="card"> <!-- Gameify -->
+                        <div class="card">
+                            <h3>
+                                ASD Poster
+                                <a class="link-to" target="_blank" href="assets/AsdAwarenessMonth.pdf">PDF</a>
+                            </h3>
+                            <details class="text">
+                                <summary>Celebrating Autism Awareness Month</summary>
+                                <span>
+                                    Created for class and selected by the Academic Support
+                                    and Disability Services office to display around campus.
+                                </span>
+                            </details>
+                            <img src="assets/AsdAwarenessMonth.png" loading="lazy"
+                                 alt="Screenshot of Poster, title reads
+                                 Autism Spectrum Disorder Awareness & Acceptance,
+                                 there are sections of text a large plant in the
+                                 shape of an infinity symbol">
+                        </div> <!-- ASD Poster -->
+                        <div class="card">
                             <h3>
                                 Gameify
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/gameify">Github</a>
+                                <a class="link-to" target="_blank" href="https://gameify.vercel.app">Visit</a>
                             </h3>
                             <details class="text">
                                 <summary>An object-oriented 2d game engine</summary>
@@ -106,50 +124,33 @@
                                 </span>
                             </details>
                             <img src="/assets/gameify.png" loading="lazy" alt="Screenshot of SimpleFile interface">
-                        </div>
-                        <div class="card"> <!-- WeatherFor.me -->
+                        </div> <!-- Gameify -->
+                        <div class="card">
                             <h3>
-                                WeatherForMe
-                                <a class="link-to website" target="_blank" href="https://jkrei0.alwaysdata.net/weather/">Visit</a>
+                                Rockingham Bicycle
+                                <a class="link-to website" target="_blank" href="assets/corp-id.pdf">PDF</a>
                             </h3>
                             <details class="text">
-                                <summary>A weather app for anywhere in the U.S.</summary>
+                                <summary>Logos and Corporate Identification Manual</summary>
                                 <span>
-                                    WeatherForMe uses data from the National Weather Service and presents it as
-                                    nice graphs. Created with Node.js and Chart.js.
+                                    for the fictional company Rockingham Bicycle & Fabrication
                                 </span>
                             </details>
-                            <img src="/assets/radar.png" loading="lazy" alt="Screenshot of the weatherfor.me weather radar">
-                        </div>
-                        <div class="card"> <!-- SimpleFile -->
+                            <img src="/assets/corp-id-logo-mark.png" loading="lazy" alt="Screenshot of the weatherfor.me weather radar">
+                        </div> <!-- RBF -->
+                        <div class="card">
                             <h3>
-                                SimpleFile
-                                <a class="link-to github" target="_blank" href="https://github.com/jkrei0/simplefile">Github</a>
+                                La Terraza Inka
+                                <a class="link-to github" target="_blank" href="https://jkrei0.alwaysdata.net/laterrazainka/">Visit</a>
                             </h3>
                             <details class="text">
-                                <summary>A minimalist web-based file browser</summary>
+                                <summary>Peruvian Restaurant Website</summary>
                                 <span>
-                                    for easily downloading files over wifi.
-                                    It's designed to be quick to set up, to make simple transfers easy.
+                                    for the ficticious restaurant La Terraza Inka.
                                 </span>
                             </details>
-                            <img src="/assets/simplefile.png" loading="lazy" alt="Screenshot of SimpleFile interface">
-                        </div>
-                        <div class="card"> <!-- Solvespace -->
-                            <h3>
-                                Solvespace
-                                <!-- <a class="link-to website" target="_blank" href="https://solvespace.com/index.pl">Website</a> -->
-                                <a class="link-to github" target="_blank" href="https://github.com/solvespace/solvespace">Github</a>
-                            </h3>
-                            <details class="text">
-                                <summary>I designed new icons for Solvespace</summary>
-                                <span>
-                                    (an open-source 3d CAD program). I recreated nearly all of the icons in the
-                                    program, and they were shipped with it in release 3.0.
-                                </span>
-                            </details>
-                            <img src="/assets/solvespace.png" loading="lazy" alt="Screenshot of Solvespace with new icons">
-                        </div>
+                            <img src="/assets/laterraza.png" loading="lazy" alt="Screenshot of Solvespace with new icons">
+                        </div> <!-- Solvespace -->
                     </div>
                 </div>
             </div>
@@ -182,9 +183,9 @@
             Home
         </button>
 
-        <div class="footer" :aria-hidden="currentPage === pages.home ? null : true">
+        <!--<div class="footer" :aria-hidden="currentPage === pages.home ? null : true">
             <span>Copyright © 2023 Jessica Kreider</span>
-        </div>
+        </div>-->
 
         <script type="module" src="/scripts/main.js"></script>
     </body>
